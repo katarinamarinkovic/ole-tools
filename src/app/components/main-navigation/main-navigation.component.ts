@@ -13,7 +13,7 @@ export class MainNavigationComponent implements OnInit {
   params: Param[];
 
   selectedParam: Param;
-
+  selectedParamValue: string;
 
 
   constructor(private dataService: DataService) { }
