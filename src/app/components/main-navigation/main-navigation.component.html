@@ -1,0 +1,25 @@
+
+<section class="left">
+  <div class="menu">
+    <h3>MAIN NAVIGATION</h3>
+    <ul class="list" id="navList">
+    </ul>
+  </div>
+<div>
+<label>OLE parms</label>
+<ng-select id="search" [items]="params"
+           bindLabel="name"
+           bindValue="value"
+           [(ngModel)]="selectedParamValue">
+</ng-select>
+<div *ngIf="selectedParamValue">
+    <div *ngFor="let param of params">
+      <div *ngIf="param.value==selectedParamValue">
+          <a [href]="param.url" target="_blank">{{param.name}}</a>
+          <p>{{param.desc}}</p>
+          <p>{{param.sample}}</p>
+      </div>
+    </div>
+</div>
+</div>
+</section>

@@ -1,0 +1,19 @@
+
+<app-main-navigation></app-main-navigation>
+
+<section class="content" id="content">
+  <div>
+      <p class="breadnav-text" id="mininav">All tools</p>
+  </div>
+  <div *ngFor="let app of apps" class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+      <a [href]="app.url">
+        <div class="card">
+          <div class="body bg-blue-emisia text-center area-box">
+            <h2>{{app.name}}</h2>
+          </div>
+        </div>
+      </a>
+  </div>
+
+</section>
+
